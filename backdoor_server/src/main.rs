@@ -45,4 +45,17 @@ fn handle_connection(message: String, mut stream: TcpStream)
     
     stream.write(&mut buffer).unwrap();
 
+    recv_output(stream);
+
+}
+
+fn recv_output(mut connection: TcpStream)
+{
+    let mut buffer: [u8; 1024] = [0; 1024];
+
+    connection.read(&mut buffer).unwrap();
+
+    let output: String = String::from_utf8_lossy(&buffer[..]).to_string();
+
+    println!("{}", output);
 }
