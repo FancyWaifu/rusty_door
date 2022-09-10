@@ -44,3 +44,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/rust,windows
+backdoor_server/target/debug/backdoor

@@ -15,7 +15,7 @@ fn main() {
             {
                 Ok(stream) => {
                     println!("Request<{}>", stream.peer_addr().unwrap());
-                    let message: String = input("Shell: ");
+                    let message: String = input("Shell:~? ");
 
                     handle_connection(message, stream);
                 }
